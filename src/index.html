@@ -161,133 +161,122 @@
 
       <article class="cmpnt cmpnt-border cmpnt-full-article main">
         <section class="section" id="map-section">
-          <h2 class="mapTitle">Concentrations of low-wage workers</h2>
-          <p class="normal-p mapSubtitle">
-            This map illustrates the percentages of low-wage workers who would
-            benefit from a raise in the minimum wage to $15. The darker colors
-            indicate higher concentrations of low-wage workers.
+          <h2 class="mapTitle">Concentrations of workers who would benefit from a minimum wage increase</h2>
+          <p class="mapSubtitle">
+            This interactive map illustrates the percentages of workers, families,
+            or children who would benefit from a raise in the minimum wage to $15.
+            The darker colors indicate higher concentrations of low-wage workers.
+            Click &ldquo;More maps&rdquo; to see the impact on different demographic groups.
           </p>
 
           <hr>
 
           <div class="mapOptions-container">
             <button type="button" class="mapOptionsBtn needsclick">
-              More maps
+              <span class="mapOptionsBtn-inner">
+                <span class="js-mapOptionsBtn-label mapOptionsBtn-label">All workers</span>
+                <span class="mapOptionsBtn-more">More maps</span>
+              </span>
+              
             </button>
             
             <div class="panel-overlay hidden">&nbsp;</div>
             
             <div id="mapOptionsPanel" class="mapOptionsPanel">
-              <ul class="tabs">
-                <li class="active">
-                  <a href="javascript:;" class="benefit-tab">Low-Wage Population</a>
-                </li>
-                <li>
-                  <a href="javascript:;" class="poverty-tab">Poverty in the US</a>
-                </li>
-              </ul>
-
               <div class="buttonGroup benefit-content">
-                <h5>Population likely to benefit by increasing the minimum wage to $15</h5>
+                <div class="mapOptionsPanel-top-section">
+                  <h5>Percent of all workers likely to benefit by increasing the minimum wage to $15</h5>
+                  <ul class="btn-list">
+                    <li class="active">
+                      <button data-value="all" class="btn" title="Change map shading to show this data">All low-income workers</button>
+                    </li>
+                  </ul>
+                </div>
+                
+                <h5>Percent of each demographic group likely to benefit by increasing the minimum wage to $15</h5>
                 <ul class="btn-list">
-                  <li class="active">
-                    <a data-value="all" class="btn" title="Change map shading to show this data" href="javascript:;">All low-income workers</a>
-                  </li>
                   <li class="group-header">
-                    <a href="javascript:;">Gender</a>
+                    <button type="button">Gender</button>
                     <ul class="sub-group gender">
                       <li>
-                        <a data-value="women" class="btn" title="Change map shading to show this data" href="javascript:;">Women</a>
+                        <button data-value="women" class="btn" title="Change map shading to show this data">Women</button>
                       </li>
                       <li>
-                        <a data-value="men" class="btn" title="Change map shading to show this data" href="javascript:;">Men</a>
+                        <button data-value="men" class="btn" title="Change map shading to show this data">Men</button>
                       </li>
                     </ul>
                   </li>
 
                   <li class="group-header">
-                    <a href="javascript:;">Family</a>
+                    <button type="button">Family</button>
                     <ul class="sub-group family">
                       <li>
-                        <a data-value="children" class="btn" title="Change map shading to show this data" href="javascript:;">Children of low-income workers</a>
+                        <button data-value="children" class="btn" title="Change map shading to show this data">Children of low-income workers</button>
                       </li>
                       <li>
-                        <a data-value="parents" class="btn" title="Change map shading to show this data" href="javascript:;">All working parents</a>
+                        <button data-value="parents" class="btn" title="Change map shading to show this data">All working parents</button>
                       </li>
                       <li>
-                        <a data-value="moms" class="btn" title="Change map shading to show this data" href="javascript:;">Working mothers</a>
+                        <button data-value="moms" class="btn" title="Change map shading to show this data">Working mothers</button>
                       </li>
                       <li>
-                        <a data-value="dads" class="btn" title="Change map shading to show this data" href="javascript:;">Working fathers</a>
+                        <button data-value="dads" class="btn" title="Change map shading to show this data">Working fathers</button>
                       </li>
                       <li>
-                        <a data-value="family" class="btn" title="Change map shading to show this data" href="javascript:;">All family members in low-income households</a>
+                        <button data-value="family" class="btn" title="Change map shading to show this data">All family members in low-income households</button>
                       </li>
                     </ul>
                   </li>
 
                   <li class="group-header js-race">
-                    <a href="javascript:;">Low-income workers by race / ethnicity</a>
+                    <button type="button">Race / ethnicity</button>
                     <ul class="sub-group family">
                       <li>
-                        <a data-value="white" class="btn" title="Change map shading to show this data" href="javascript:;">White</a>
+                        <button data-value="white" class="btn" title="Change map shading to show this data">White</button>
                       </li>
                       <li>
-                        <a data-value="black" class="btn" title="Change map shading to show this data" href="javascript:;">African American</a>
+                        <button data-value="black" class="btn" title="Change map shading to show this data">African American</button>
                       </li>
                       <li>
-                        <a data-value="hispanic" class="btn" title="Change map shading to show this data" href="javascript:;">Latino</a>
+                        <button data-value="hispanic" class="btn" title="Change map shading to show this data">Latino</button>
                       </li>
                       <li>
-                        <a data-value="otherRace" class="btn" title="Change map shading to show this data" href="javascript:;">Asian American and Other</a>
+                        <button data-value="otherRace" class="btn" title="Change map shading to show this data">Asian American and Other</button>
                       </li>
                     </ul>
                   </li>
 
                   <li class="group-header js-age">
-                    <a href="javascript:;">Low-income workers by age</a>
+                    <button type="button">Age</button>
                     <ul class="sub-group family">
                       <li>
-                        <a data-value="age1" class="btn" title="Change map shading to show this data" href="javascript:;">Younger than 25</a>
+                        <button data-value="age1" class="btn" title="Change map shading to show this data">Younger than 25</button>
                       </li>
                       <li>
-                        <a data-value="age2" class="btn" title="Change map shading to show this data" href="javascript:;">25-39</a>
+                        <button data-value="age2" class="btn" title="Change map shading to show this data">25-39</button>
                       </li>
                       <li>
-                        <a data-value="age3" class="btn" title="Change map shading to show this data" href="javascript:;">40-54</a>
+                        <button data-value="age3" class="btn" title="Change map shading to show this data">40-54</button>
                       </li>
                       <li>
-                        <a data-value="age4" class="btn" title="Change map shading to show this data" href="javascript:;">55 and older</a>
+                        <button data-value="age4" class="btn" title="Change map shading to show this data">55 and older</button>
                       </li>
                     </ul>
                   </li>
-
+                  
+                  <li class="group-header js-poverty">
+                    <button type="button">Poverty</button>
+                    <ul class="sub-group family">
+                      <li>
+                        <button data-value="poverty" class="btn" title="Change map shading to show this data">In poverty</button>
+                      </li>
+                      <li>
+                        <button data-value="nearPoverty" class="btn" title="Change map shading to show this data">Below 200% of the poverty line</button>
+                      </li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
-
-              <div class="buttonGroup poverty-content hidden">
-                <h5>Percent of working families that live ...</h5>
-                <ul class="btn-list">
-                  <li>
-                    <a data-value="poverty" class="btn" title="Change map shading to show this data" href="javascript:;">In poverty</a>
-                  </li>
-                  <li>
-                    <a data-value="nearPoverty" class="btn" title="Change map shading to show this data" href="javascript:;">Below 200% of the poverty line</a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- <div class="buttonGroup mapTypeBtns">
-                <h5>Map type</h5>
-                <ul class="btnGroupToggle set2">
-                  <li class="first active">
-                    <a data-value="6" title="Change map type" href="javascript:;">Congressional districts</a>
-                  </li>
-                  <li class="last">
-                    <a data-value="7" title="Change map type" href="javascript:;">States</a>
-                  </li>
-                </ul>
-              </div> -->
             </div>
           </div>
 
