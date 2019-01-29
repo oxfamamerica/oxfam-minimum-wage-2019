@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 yep-ie"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 yep-ie"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 yep-ie"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9 yep-ie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!-- PAGE HEAD -->
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="https://s3.amazonaws.com/oxfam-us/www/static/media/files/favicon.ico" />
+  <meta charset="utf-8" />
+  <title>
+    Minimum wage map | Oxfam America
+  </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="description" content="" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="cleartype" content="on" />
+
+  <!-- <link rel="stylesheet" href="/static/lightbox/css/style.min.css" /> -->
+  <!-- <link rel="stylesheet" href="static/css/main-min.css" /> -->
+  <link rel="stylesheet" href="https://policy-practice.oxfamamerica.org/static/css/main-min.css" />
+  <link rel="stylesheet" href="styles/index.css" />
+
+
+  <script src="static/js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="static/js/vendor/jquery-1.9.1.min.js"></script>
+  <!-- <script src="/static/js/vendor/foundation.min.js"></script> -->
+  <!--[if lt IE 9]><script src="/static/js/vendor/respond.min.js"></script><![endif]-->
+
+  <script>
+    dataLayer = [];
+  </script>
+
+  <meta property="og:description" content="" />
+
+</head>
+<!-- END HEAD -->
+
+<!-- PAGE BODY -->
+
+<body class="theme-b">
+  <svg width="0" height="0" class="hidden">
+    <defs>
+      <g id="ox_horiz" data-name="oxfam horizontal">
+        <path class="fill-green" d="M335.42,287A127.57,127.57,0,1,1,207.85,159.42,127.57,127.57,0,0,1,335.42,287ZM157,258.38h23.28a1.35,1.35,0,0,0,1.3-1.31,26.52,26.52,0,0,1,52.45,0,1.44,1.44,0,0,0,1.38,1.31h23.19a1.3,1.3,0,0,0,1.31-1.3,52.26,52.26,0,0,0-104.22,0A1.3,1.3,0,0,0,157,258.38Zm75.84,48.43a52.24,52.24,0,0,0,27-41.9,1.3,1.3,0,0,0-1.31-1.3H235.34a1.36,1.36,0,0,0-1.31,1.3,26.51,26.51,0,0,1-52.44,0,1.32,1.32,0,0,0-1.31-1.3H157a1.31,1.31,0,0,0-1.3,1.3,52.23,52.23,0,0,0,27,41.9,52.23,52.23,0,0,0-27.17,44.53,1.3,1.3,0,0,0,1.31,1.3H180a1.31,1.31,0,0,0,1.31-1.3,26.52,26.52,0,0,1,53,0,1.3,1.3,0,0,0,1.3,1.3h23.15a1.3,1.3,0,0,0,1.3-1.3A52.22,52.22,0,0,0,232.88,306.81Z"
+          transform="translate(-80.28 -159.42)" />
+        <path class="fill-green" d="M437.23,300.81c0,7.67-7.87,10.27-12.48,10.27s-12.49-2.6-12.49-10.27V259c0-7.68,7.87-10.27,12.49-10.27s12.48,2.6,12.48,10.27v41.81Zm-12.48-72.34c-22.3.06-32.66,15.7-32.66,29v44.91c0,13.29,10.36,28.92,32.66,29s32.65-15.7,32.65-29V257.44C457.4,244.17,447,228.53,424.75,228.47Z"
+          transform="translate(-80.28 -159.42)" />
+        <polygon class="fill-green" points="487.57 170.08 487.57 130.98 517.7 130.98 517.7 110.94 487.72 110.94 487.72 91.04 522.63 91.04 522.63 70.87 467.45 70.87 467.45 170.08 487.57 170.08" />
+        <path class="fill-green" d="M637.08,261.25l8.06,31.22H628.87ZM654.7,329.5h20.11l-26.3-99.21H625L599.09,329.5H619.3l4.61-17.57h26.26Z" transform="translate(-80.28 -159.42)" />
+        <polygon class="fill-green" points="431.47 120.41 457.15 70.87 433.85 70.87 419.8 99.76 405.74 70.87 382.44 70.87 408.13 120.41 382.3 170.08 405.87 170.08 419.8 141.26 433.72 170.08 457.29 170.08 431.47 120.41" />
+        <polygon class="fill-green" points="659.4 70.87 641.65 109.04 623.65 70.87 602.99 70.87 602.99 170.09 622.71 170.09 622.71 113.65 635.38 140.03 647.96 140.03 660.63 113.73 660.63 170.09 680.35 170.09 680.35 70.87 659.4 70.87" />
+    </defs>
+  </svg>
+
+  <header id="PageHeader" class="wrapper">
+    <a href="#PrimaryNav" class="skip-link skip-link-top-nav"></a>
+    <a href="/" id="Logo" class="logo"><svg class="ox-horiz" viewBox="0 0 680.35 255.13">
+        <title>Oxfam</title>
+        <use xlink:href="#ox_horiz" />
+      </svg></a>
+    <p id="HeaderStrapline" class="hidden-phone">The power of people against poverty</p>
+    <nav id="NavContainer">
+      <!-- SEARCH FORM -->
+      <form id="Search" method="GET" action="/search">
+        <div class="cmpnt-search">
+          <label for="siteSearch">Search</label>
+          <input type="search" value="" id="siteSearch" name="q" placeholder="Search" />
+          <button type="submit" title="Search">Go</button>
+        </div>
+      </form>
+      <!-- END -->
+      <div class="primary-nav-wrap">
+        <!-- PRIMARY NAVIGATION -->
+        <ul id="PrimaryNav" class="is_extended">
+          <li><a href="/work/" title="Our work" class="">Our work</a></li>
+          <li><a href="/publications/" title="Publications" class="">Publications</a></li>
+          <li><a href="/people/" title="Our people" class="">Our people</a></li>
+          <li><a href="http://politicsofpoverty.oxfamamerica.org">Blog</a></li>
+        </ul>
+        <!-- END -->
+      </div>
+      <!-- SECONDARY NAVIGATION -->
+      <ul id="SecondaryNav" class="hidden-phone hidden-tablet">
+        <li><a href="http://www.oxfamamerica.org/" title="Oxfam America Website">Oxfam America</a></li>
+        <li><a class="current" href="/" title="Oxfam America Policy &amp; Practice Website">Policy &amp; Practice</a></li>
+        <li><a href="http://www.oxfamgifts.com" title="Shop Oxfam Gifts">Oxfam Gifts</a></li>
+      </ul>
+      <ul id="TertiaryNav" class="hidden-phone hidden-tablet">
+        <li><a href="http://www.oxfamamerica.org/press/" title="Press">Press</a></li>
+        <li><a href="http://www.oxfamamerica.org/explore/about-oxfam">About us</a></li>
+        <li><a href="http://www.oxfamamerica.org/donate/" title="Donate">Donate</a></li>
+        <li><a href="http://www.oxfamamerica.org/explore/about-oxfam/contact-us/" title="Contact us">Contact us</a></li>
+        <li><a href="http://www.oxfamamerica.org/donate/help/" title="Help">Help</a></li>
+      </ul>
+      <!-- END -->
+    </nav>
+  </header>
+  <!-- END HEADER -->
+
+  <!-- PAGE BREADCRUMBS -->
+  <ul class="cmpnt-breadcrumbs wrapper">
+    <li><a href="/"><i class="icon-home"></i><span>Home</span></a></li>
+    <li><a href="/work">Work</a></li>
+    <li><a href="/work/poverty-in-the-us/">Poverty in the US</a></li>
+    <li><a href="#">Minimum wage</a></li>
+  </ul>
+  <!-- END BREADCRUMBS -->
+
+
+
+
+
+
+
+
+
+
+  <!-- START -->
+  <!-- ******************************************** -->
+  <!-- ******************************************** -->
+  <!-- ******************************************** -->
+
+  <!-- START PAGE CONTENT -->
+  <div class="wrapper">
+    <div id="page">
+      <article class="cmpnt cmpnt-border cmpnt-full-article main">
+        <h1 class="alt-headline-green">Working poor in America</h1>
+          <div class="intro">
+            <div class="intro-content">
+              <p>
+                Low-wage workers are everywhere in America. Lorem ipsum dolor sit
+                amet consectetur, adipisicing elit. Vero deserunt porro ipsum a
+                debitis repellat repudiandae. Aperiam dolores voluptate aliquid.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet in
+                fuga est necessitatibus eos vitae quos libero qui eligendi.
+                Voluptatibus numquam fugit veniam illum, eligendi laborum velit sed.
+                Quas, consectetur?
+              </p>
+              
+          </div>
+          <div class="intro-partner">
+              In partnership with
+              <div class="intro-partner-logo-wrap">
+                  <img src="./images/logo-epi.svg" alt="Economic Policy Institute">
+              </div>
+          </div>
+        </div>
+        <div class="intro-action-button-wrap">
+          <a class="cmpnt-submit-pointed reverse" href="http://www.oxfamamerica.org/working-poor-map-action">Take action</a>
+        </div>
+      </article>
+
+      <article class="cmpnt cmpnt-border cmpnt-full-article main">
+        <section class="section" id="map-section">
+          <h2 class="mapTitle">Concentrations of low-wage workers</h2>
+          <p class="normal-p mapSubtitle">
+            This map illustrates the percentages of low-wage workers who would
+            benefit from a raise in the minimum wage to $15. The darker colors
+            indicate higher concentrations of low-wage workers.
+          </p>
+
+          <hr>
+
+          <div class="mapOptions-container">
+            <button type="button" class="mapOptionsBtn needsclick">
+              More maps
+            </button>
+            
+            <div class="panel-overlay hidden">&nbsp;</div>
+            
+            <div id="mapOptionsPanel" class="mapOptionsPanel">
+              <ul class="tabs">
+                <li class="active">
+                  <a href="javascript:;" class="benefit-tab">Low-Wage Population</a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="poverty-tab">Poverty in the US</a>
+                </li>
+              </ul>
+
+              <div class="buttonGroup benefit-content">
+                <h5>Population likely to benefit by increasing the minimum wage to $15</h5>
+                <ul class="btn-list">
+                  <li class="active">
+                    <a data-value="all" class="btn" title="Change map shading to show this data" href="javascript:;">All low-income workers</a>
+                  </li>
+                  <li class="group-header">
+                    <a href="javascript:;">Gender</a>
+                    <ul class="sub-group gender">
+                      <li>
+                        <a data-value="women" class="btn" title="Change map shading to show this data" href="javascript:;">Women</a>
+                      </li>
+                      <li>
+                        <a data-value="men" class="btn" title="Change map shading to show this data" href="javascript:;">Men</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="group-header">
+                    <a href="javascript:;">Family</a>
+                    <ul class="sub-group family">
+                      <li>
+                        <a data-value="children" class="btn" title="Change map shading to show this data" href="javascript:;">Children of low-income workers</a>
+                      </li>
+                      <li>
+                        <a data-value="parents" class="btn" title="Change map shading to show this data" href="javascript:;">All working parents</a>
+                      </li>
+                      <li>
+                        <a data-value="moms" class="btn" title="Change map shading to show this data" href="javascript:;">Working mothers</a>
+                      </li>
+                      <li>
+                        <a data-value="dads" class="btn" title="Change map shading to show this data" href="javascript:;">Working fathers</a>
+                      </li>
+                      <li>
+                        <a data-value="family" class="btn" title="Change map shading to show this data" href="javascript:;">All family members in low-income households</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="group-header js-race">
+                    <a href="javascript:;">Low-income workers by race / ethnicity</a>
+                    <ul class="sub-group family">
+                      <li>
+                        <a data-value="white" class="btn" title="Change map shading to show this data" href="javascript:;">White</a>
+                      </li>
+                      <li>
+                        <a data-value="black" class="btn" title="Change map shading to show this data" href="javascript:;">African American</a>
+                      </li>
+                      <li>
+                        <a data-value="hispanic" class="btn" title="Change map shading to show this data" href="javascript:;">Latino</a>
+                      </li>
+                      <li>
+                        <a data-value="otherRace" class="btn" title="Change map shading to show this data" href="javascript:;">Asian American and Other</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="group-header js-age">
+                    <a href="javascript:;">Low-income workers by age</a>
+                    <ul class="sub-group family">
+                      <li>
+                        <a data-value="age1" class="btn" title="Change map shading to show this data" href="javascript:;">Younger than 25</a>
+                      </li>
+                      <li>
+                        <a data-value="age2" class="btn" title="Change map shading to show this data" href="javascript:;">25-39</a>
+                      </li>
+                      <li>
+                        <a data-value="age3" class="btn" title="Change map shading to show this data" href="javascript:;">40-54</a>
+                      </li>
+                      <li>
+                        <a data-value="age4" class="btn" title="Change map shading to show this data" href="javascript:;">55 and older</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="buttonGroup poverty-content hidden">
+                <h5>Percent of working families that live ...</h5>
+                <ul class="btn-list">
+                  <li>
+                    <a data-value="poverty" class="btn" title="Change map shading to show this data" href="javascript:;">In poverty</a>
+                  </li>
+                  <li>
+                    <a data-value="nearPoverty" class="btn" title="Change map shading to show this data" href="javascript:;">Below 200% of the poverty line</a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- <div class="buttonGroup mapTypeBtns">
+                <h5>Map type</h5>
+                <ul class="btnGroupToggle set2">
+                  <li class="first active">
+                    <a data-value="6" title="Change map type" href="javascript:;">Congressional districts</a>
+                  </li>
+                  <li class="last">
+                    <a data-value="7" title="Change map type" href="javascript:;">States</a>
+                  </li>
+                </ul>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="interactive-container" id="interactive-container">
+              <div class="map-container">
+                  <svg id="map"></svg>
+              </div>
+              <div class="key-container wrapper">
+                  <svg id="key" height="35"></svg>
+              </div>
+              <div id="mapTooltip"></div>
+              <div class="mapControl-container">
+    			<button class="mapControlBtn homeBtn" title="Reset zoom" aria-label="Reset zoom"><span class="mobile-text">Reset</span></button>
+    			<button class="mapControlBtn zoomInBtn" title="Zoom in" aria-label="Zoom in"><span class="mobile-text">Zoom In</span></button>
+    			<button class="mapControlBtn zoomOutBtn" title="Zoom out" aria-label="Zoom out"><span class="mobile-text">Zoom Out</span></button>
+    		</div>
+          </div>
+
+          <hr>
+        </section>
+
+        <section id="footnotes" class="footnotes">
+          <h3>Footnotes</h3>
+          <ol>
+            <li>
+              We define low-wages workers as those earning $15 per hour or less.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil magni rerum assumenda voluptates perspiciatis.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, perspiciatis. Voluptatum neque necessitatibus ipsum, repudiandae.
+            </li>
+          </ol>
+
+          <div class="sources">
+            <h4>Sources</h4>
+            <ul>
+              <li>
+                Data compiled and analyzed by Oxfam America and the Economic Policy Institute.
+              </li>
+              <li>
+                Congressional district and state maps: Census Bureau, Natural Earth Data
+              </li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+  </div>
+  <!-- END PAGE CONTENT -->
+
+
+  <!-- POPUP -->
+  <div class="popup cmpnt-sidebar" id="popup">
+    <div class="close-container">
+        <button class="close-btn js-close-popup">Close</button>
+    </div>
+    <h3 class="districtName">&nbsp;</h3>
+    
+    <div class="popup-content">
+      <section>
+        <p class="lead">
+			    <span class="affectedCount">xx,xxx</span> workers in this state
+          would benefit from increasing the minimum wage to $15.
+        </p>
+
+        <table class="popupTable">
+				  <tr class="label">
+					  <td colspan="2">Percent of workers likely to benefit from increasing the minimum wage to $15</td>
+				  </tr>
+        <tr class="data">
+        	<td class="col1">All</td>
+        	<td class="col2 affectedShare">x%</td>
+        </tr>
+        <tr class="data">
+        	<td class="col1">Women</td>
+        	<td class="col2 data2">x%</td>
+        </tr>
+        <tr class="data last">
+        	<td class="col1">Men</td>
+        	<td class="col2 data3">x%</td>
+        </tr>
+        <tr class="label">
+        	<td colspan="2">Percent of working families that live ...</td>
+        </tr>
+        <tr class="data">
+        	<td class="col1">In poverty</td>
+        	<td class="col2 data4">x%</td>
+        </tr>
+        <tr class="data last">
+        	<td class="col1">Below 200% of the poverty line</td>
+        	<td class="col2 data5">x%</td>
+        </tr>
+			</table>
+      
+      <a href="scorecard.html" target="_blank" class="btn js-scorecard-btn">Open state scorecard</a>
+    </section>
+
+
+    <section class="tweet">
+      <h4 class="small-head">Tweet U.S. Senators from <span class="districtName"></span></h4>
+      <p class="tweet-intro">
+        Send a message to senators <span class="senatorName">senatorName</span>
+      </p>
+      
+      <div class="tweet-speech-bubble">
+        <div class="js-tweet-message">
+          @ChuckGrassley @SenatorHarkin: 276,000 workers in Iowa could benefit from
+          a $15 minimum wage. See this Oxfam report: <span class="url">www.oxfamamerica.org/workingpoormap</span>
+        </div>
+        
+        <a href="#" target="_blank" class="btn tweet-btn js-tweet-btn">
+          <img src="images/icon-twitter-white.svg" alt="Twitter" class="tweet-icon">
+          Tweet senators
+        </a>
+      </div>
+      
+    </section>
+  </div>
+  </div>
+  <!-- END POPUP -->
+
+  <!-- JAVASCRIPT CALLS -->
+  <script src="static/js/vendor/jquery-1.9.1.min.js"></script>
+  <script src="js/index.js"></script>
+
+
+  <!-- END -->
+  <!-- ******************************************** -->
+  <!-- ******************************************** -->
+  <!-- ******************************************** -->
+  <!-- ******************************************** -->
+
+</body>
+
+</html>

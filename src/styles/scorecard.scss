@@ -1,0 +1,43 @@
+@import "00-config/_reset";
+@import "00-config/__config";
+
+
+// Default colors
+$text-color         : $black;
+$background-color   : #fff;
+a {
+  color: $ox-green
+}
+  
+
+// Default typograhy settings
+$base-font-size     : 14px;
+$base-line-height   : 1.6;
+$sans-serif         : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$regular            : 400;
+$medium             : 500;
+$bold               : 700;
+
+$mobile: 700px;
+
+
+.hidden {
+  display: none
+}
+  
+
+  
+body {
+  font-family: $sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  letter-spacing: normal;
+
+  @media print {
+    font-size: 10px;
+  }
+}
+
+@import "02-scorecard/__scorecard";

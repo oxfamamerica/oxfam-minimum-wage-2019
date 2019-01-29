@@ -1,0 +1,50 @@
+.graph-wrapper {
+	position: relative;
+
+	.key {
+		font-size: 12px;
+		font-weight: bold;
+		margin-bottom: 10px;
+    line-height: 1;
+		
+		&.positioned {
+			position: absolute;
+			top: 7px;
+			right: 0;
+			text-align: left;
+			margin-bottom: 0;
+
+			span {
+				&:first-of-type {
+					margin-left: 20px;
+				}
+			}
+		}
+
+		span {
+			display: inline-block;
+			position: relative;
+			padding-left: 18px;
+			margin-left: 20px;
+			margin-bottom: 5px;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+
+			&:before {
+				content: '';
+				width: 13px;
+				height: 13px;
+				background: $beige-dark;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			&.this:before {
+				background-color: $ox-green;
+			}
+		}
+	}
+}

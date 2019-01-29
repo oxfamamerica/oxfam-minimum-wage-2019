@@ -1,0 +1,29 @@
+.mapTitle {
+	margin-bottom: 0;
+}
+
+.mapSubtitle {
+	font-size: 0.875em;
+}
+
+#interactive-container {
+	position: relative;
+
+	.map-container {
+		position: relative;
+	}
+
+	.key-container {
+		margin-bottom: 20px;
+	}
+}
+
+
+@media only screen and (max-width: 699px) {
+	#interactive-container {
+		.key-container {
+			margin-top: 10px;
+		}
+		padding-bottom: 20px;
+	}
+}

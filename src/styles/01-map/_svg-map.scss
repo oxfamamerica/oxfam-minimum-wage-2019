@@ -1,0 +1,73 @@
+svg text {
+  fill: #333;
+}
+
+svg#map {
+	fill: none;
+	z-index: 0;
+	cursor: pointer;
+	overflow: hidden;
+
+	.stateLabel {
+		fill:  #000;
+		text-anchor: middle;
+		pointer-events: none;
+
+		&.stateLabel-HI {
+			fill: #999;
+            
+            &.selected {
+                fill: #000;
+            }
+		}
+        
+        &.selected {
+            fill: #fff;
+        }
+	}
+
+	.citiesGroup {
+		pointer-events: none;
+	}
+
+	.place,
+	.place-label {
+		fill: #000;
+		pointer-events: none;
+	}
+
+	.hover {
+		fill:  $ox-green;
+	}
+
+	.selected,
+	.selected.hover {
+		fill: $purple;
+	}
+}
+
+
+
+.district,
+.district-border,
+.state-border {
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+
+
+
+#key {
+	font-size: 10px;
+
+	path {
+		display: none;
+	}
+
+	line {
+		stroke: #000;
+		shape-rendering: crispEdges;
+	}
+}

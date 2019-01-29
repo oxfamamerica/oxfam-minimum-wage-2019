@@ -1,0 +1,45 @@
+/* ========================================
+Helper classes
+======================================== */
+.grey {
+	color: #999;
+}
+
+.small {
+	font-size: 0.8em;
+}
+
+
+/* ========================================
+Overides to OA main.css
+======================================== */
+
+.cmpnt-submit-pointed.reverse {
+	background: $blue;
+	color: white;
+	height: 42px;
+  line-height: 42px;
+
+	&::after {
+		border-left-color: $blue;
+		border-width: 21px;
+		margin-top: -21px;
+	}
+
+	&:hover {
+		background: $blue-dark;
+    transition: background-color 100md ease-in-out;
+
+		&::after {
+			border-left-color: $blue-dark;
+			transition: background-color 100md ease-in-out;
+		}
+	}
+}
+
+
+article footer.cmpnt-full-article-footer div.cmpnt-full-article-share {
+	margin-bottom: 0;
+}
+
+

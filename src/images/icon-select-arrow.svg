@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="13px" height="9px" viewBox="0 0 13 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>select-arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="main-layout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-1022.000000, -703.000000)" fill="#9B9B9B">
+            <g id="Group-7" transform="translate(718.000000, 692.000000)">
+                <path d="M316.167343,13.6006179 C316.358323,13.4096378 316.358323,13.0964304 316.167343,12.9054503 L314.899235,11.6449815 C314.708255,11.4540014 314.402687,11.4540014 314.211707,11.6449815 L310.155289,15.7013991 L306.098871,11.6449815 C305.907891,11.4540014 305.602323,11.4540014 305.411343,11.6449815 L304.143235,12.9054503 C303.952255,13.0964304 303.952255,13.4096378 304.143235,13.6006179 L309.811525,19.2612685 C310.002505,19.4522486 310.308073,19.4522486 310.499053,19.2612685 L316.167343,13.6006179 Z" id="select-arrow"></path>
+            </g>
+        </g>
+    </g>
+</svg>

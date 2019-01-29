@@ -1,0 +1,8 @@
+$mobile: 700px;
+$ipad: 1024px;
+$inset: 976px;
+$ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+@import "colors";
+@import "mixins";
+@import "overrides";

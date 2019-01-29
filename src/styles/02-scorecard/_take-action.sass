@@ -1,0 +1,61 @@
+.action-btns
+  @media print
+    display: none
+
+  .cmpnt-submit-pointed
+    margin-top: 20px
+    margin-right: 60px
+    display: inline-block
+    background: $blue
+    color: white
+    height: 42px
+    font-size: 16px
+    line-height: 41px
+    font-weight: bold
+    position: relative
+    padding: 0 10px
+
+    @media screen and (max-width: 700px)
+      font-size: 1.6em
+      line-height: 38px
+      height: 38px
+      margin-right: 40px
+
+    &::after 
+      content: ''
+      position: absolute
+      top: 50%
+      left: 100%
+      border: 18px solid transparent
+      border-left-color: $blue
+      border-width: 21px
+      margin-top: -21px
+
+      @media screen and (max-width: 700px)
+        margin-top: -19px
+        border-width: 19px
+    &:hover 
+      background: $blue-dark
+      transition: all 100ms ease-in-out
+      &::after 
+        border-left-color: $blue-dark
+        transition: all 100ms ease-in-out
+
+  a.tweet
+    display: inline-block
+    height: 42px
+    margin-right: 40px
+    margin-top: 20px
+    padding: 0 0 0 30px
+    color: $blue
+    font-size: 15px
+    line-height: 41px
+    background: url('../images/icon-twitter-small.svg') no-repeat 0 50%
+    
+    @media screen and (max-width: 700px)
+      display: block
+      font-size: 1.6em
+      height: 38px
+      line-height: 38px
+      margin-right: 30px
+      padding-left: 25px

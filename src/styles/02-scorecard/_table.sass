@@ -1,0 +1,64 @@
+table
+  width: 100%
+  margin-bottom: 10px
+  border-collapse: collapse
+
+  th
+    padding: 5px 10px
+    font-size: ems(12)
+    color: #888
+    vertical-align: bottom
+
+  td
+    padding: 10px
+    // border: solid 1px white
+    vertical-align: middle
+    // background: tint($beige, 30%)
+
+    @media print
+      border: solid 1px #999
+      background: white
+
+  
+
+.table
+  td, th
+    text-align: center
+    line-height: 1.3
+    
+    &:nth-child(2)
+      background: rgba($beige, 0.6)
+  
+  td
+    border-bottom: solid 1px #ddd
+
+    @media print
+      padding: 5px 3px
+
+    &:nth-child(1)
+      text-align: left
+      width: 45%
+
+      @media screen and (min-width: 800px)
+        max-width: 150px
+        min-width: 150px
+    
+    &:nth-child(2),
+    &:nth-child(3)
+      background: rgba($beige, 0.6)
+      
+    span.percent
+      display: block
+    span.total
+      display: block
+      font-size: ems(12)
+      color: #aaa
+
+.table.equal3
+  td, th
+    width: 33%
+
+
+.table.equal4
+  td, th
+    width: 25%
