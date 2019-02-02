@@ -19,17 +19,17 @@ export function updatePopUp(id, series) {
 
     $('#popup .districtName').html(data[id].districtName);
     $('#popup .senatorName').html(data[state].repName);
-    $('#popup .affectedCount').html(data[id].affectedAllCount);
+    $('#popup .affectedCount').html(data[id].allCount);
     $('.js-scorecard-btn').attr("href", function() { return "scorecard.html?state=" + id; });
     
-    $('#popup .popupTable').html('<tr class="label"><td colspan="2">Percent of workers likely to benefit from increasing the minimum wage to $10.10</td></tr><tr class="data"><td class="col1">All</td><td class="col2">' + formatPercent(data[id].affectedAllShare) + '</td></tr>');
+    $('#popup .popupTable').html('<tr class="label"><td colspan="2">Percent of workers likely to benefit from increasing the minimum wage to $15</td></tr><tr class="data"><td class="col1">All</td><td class="col2">' + formatPercent(data[id].allShare) + '</td></tr>');
 
     if ( series === "all" ) {
-        $('#popup .popupTable').append('<tr class="data"><td class="col1">Women</td><td class="col2">' + formatPercent(data[id].affectedWomenShare) + '</td></tr><tr class="data last"><td class="col1">Men</td><td class="col2">' + formatPercent(data[id].affectedMenShare) + '</td></tr>' + '<tr class="label"><td colspan="2">Percent of working families that live ...</td></tr><tr class="data"><td class="col1">In poverty</td><td class="col2">' + formatPercent(data[id].povertyShare) + '</td></tr><tr class="data last"><td class="col1">Below 200% of the poverty line</td><td class="col2">' + formatPercent(data[id].poorShare) + '</td></tr>');
+        $('#popup .popupTable').append('<tr class="data"><td class="col1">Women</td><td class="col2">' + formatPercent(data[id].womenShare) + '</td></tr><tr class="data last"><td class="col1">Men</td><td class="col2">' + formatPercent(data[id].menShare) + '</td></tr>' + '<tr class="label"><td colspan="2">Percent of working families that live ...</td></tr><tr class="data"><td class="col1">In poverty</td><td class="col2">' + formatPercent(data[id].povertyShare) + '</td></tr><tr class="data last"><td class="col1">Below 200% of the poverty line</td><td class="col2">' + formatPercent(data[id].poorShare) + '</td></tr>');
     }
 
     if ( series === "gender" ) {
-        $('#popup .popupTable').append('<tr class="data"><td class="col1">Women</td><td class="col2">' + formatPercent(data[id].affectedWomenShare) + '</td></tr><tr class="data last"><td class="col1">Men</td><td class="col2">' + formatPercent(data[id].affectedMenShare) + '</td></tr>');
+        $('#popup .popupTable').append('<tr class="data"><td class="col1">Women</td><td class="col2">' + formatPercent(data[id].womenShare) + '</td></tr><tr class="data last"><td class="col1">Men</td><td class="col2">' + formatPercent(data[id].menShare) + '</td></tr>');
     }
 
     if ( series === "poverty" ) {
@@ -39,7 +39,7 @@ export function updatePopUp(id, series) {
     if ( series === "race") {
         $('#popup .popupTable').append('<tr class="data"><td class="col1">Whites</td><td class="col2">' + formatPercent(data[id].whiteShare) + '</td></tr><tr class="data"><td class="col1">African Americans</td><td class="col2">' + formatPercent(data[id].blackShare) + '</td></tr><tr class="data"><td class="col1">Latinos</td><td class="col2">' + formatPercent(data[id].hispanicShare) + '</td></tr><tr class="data"><td class="col1">Asian Americans and others</td><td class="col2">' + formatPercent(data[id].otherRaceShare) + '</td></tr>');
 
-        $('#popup .popupTable').append('<tr class="label"><td colspan="2">Share of all affected workers who are ...<sup id="footnoteRef5"><a class="inlineFootnote" href="#fn5">5</a></sup></td></tr><tr class="data"><td class="col1">White</td><td class="col2">' + formatPercent(data[id].whiteAllShare) + '</td></tr><tr class="data"><td class="col1">African American</td><td class="col2">' + formatPercent(data[id].blackAllShare) + '</td></tr><tr class="data"><td class="col1">Latino</td><td class="col2">' + formatPercent(data[id].hispanicAllShare) + '</td></tr><tr class="data last"><td class="col1">Asian American and other</td><td class="col2">' + formatPercent(data[id].otherRaceAllShare) + '</td></tr>');
+        $('#popup .popupTable').append('<tr class="label"><td colspan="2">Share of all affected workers who are ...<sup id="footnoteRef5"><a class="inlineFootnote" href="#fn5">5</a></sup></td></tr><tr class="data"><td class="col1">White</td><td class="col2">' + formatPercent(data[id].whiteShareOfTotal) + '</td></tr><tr class="data"><td class="col1">African American</td><td class="col2">' + formatPercent(data[id].blackShareOfTotal) + '</td></tr><tr class="data"><td class="col1">Latino</td><td class="col2">' + formatPercent(data[id].hispanicShareOfTotal) + '</td></tr><tr class="data last"><td class="col1">Asian American and other</td><td class="col2">' + formatPercent(data[id].otherRaceShareOfTotal) + '</td></tr>');
     }
 
     if ( series === "family" ) {
@@ -57,8 +57,8 @@ export function updatePopUp(id, series) {
             .attr("href", function() {
                 var baseURL = "https://twitter.com/home?status=";
                 var message1 = "%20workers%20in%20",
-                    message2 = "%20could%20benefit%20from%20a%20$10.10%20minimum%20wage.%20See%20this%20Oxfam%20report:%20http://www.oxfamamerica.org/workingpoormap";
-                return baseURL + data[state].twitter + ":%20" + data[state].affectedAllCount + message1 + state + message2;
+                    message2 = "%20could%20benefit%20from%20a%20$15%20minimum%20wage.%20See%20this%20Oxfam%20report:%20http://www.oxfamamerica.org/workingpoormap";
+                return baseURL + data[state].twitter + ":%20" + data[state].allCount + message1 + state + message2;
             });
     } else {
         d3.select('#popup a.tweetSen').classed('hidden', true);
@@ -78,8 +78,8 @@ export function updatePopUp(id, series) {
     //             .classed('hidden', false)
     //             .attr("href", function() {
     //                 var baseURL = "https://twitter.com/home?status=";
-    //                 var message = "%20workers%20in%20your%20district%20could%20benefit%20from%20a%20$10.10%20minimum%20wage.%20See%20this%20Oxfam%20report:%20http://www.oxfamamerica.org/workingpoormap";
-    //                 return baseURL + data[id].twitter + ":%20" + data[id].affectedAllCount + message;
+    //                 var message = "%20workers%20in%20your%20district%20could%20benefit%20from%20a%20$15%20minimum%20wage.%20See%20this%20Oxfam%20report:%20http://www.oxfamamerica.org/workingpoormap";
+    //                 return baseURL + data[id].twitter + ":%20" + data[id].allCount + message;
     //             });
     //     } else {
     //         d3.select('#popup a.tweetRep').classed('hidden', true);

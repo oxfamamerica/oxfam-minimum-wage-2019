@@ -1,0 +1,27 @@
+.footnotes {
+  li,
+  li > p {
+    font-weight: 400 !important;
+    font-size: 12px  !important;
+  }
+  
+  li {
+    margin-bottom: 8px !important;
+  }
+  
+  li > p {
+    margin-bottom: 4px !important;
+  }
+}
+
+.footnotes,
+.sources {
+  max-width: 100rem;
+  
+  h4 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+}

@@ -12,13 +12,13 @@ const data = csvData[id];
 
 d3.selectAll(".js-districtName").html(data.districtName);
 
-d3.selectAll(".js-affectedAllCount").html(data.affectedAllCount);
-d3.selectAll(".js-affectedAllShare").html(formatPercent(data.affectedAllShare));
+d3.selectAll(".js-allCount").html(data.allCount);
+d3.selectAll(".js-allShare").html(formatPercent(data.allShare));
 
-d3.selectAll(".js-affectedMenCount").html(data.affectedMenCount);
-d3.selectAll(".js-affectedMenShare").html(formatPercent(data.affectedMenShare));
-d3.selectAll(".js-affectedWomenCount").html(data.affectedWomenCount);
-d3.selectAll(".js-affectedWomenShare").html(formatPercent(data.affectedWomenShare));
+d3.selectAll(".js-menCount").html(data.menCount);
+d3.selectAll(".js-menShare").html(formatPercent(data.menShare));
+d3.selectAll(".js-womenCount").html(data.womenCount);
+d3.selectAll(".js-womenShare").html(formatPercent(data.womenShare));
 
 d3.selectAll(".js-parentsCount").html(data.parentsCount);
 d3.selectAll(".js-parentsShare").html(formatPercent(data.parentsShare));

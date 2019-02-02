@@ -131,43 +131,45 @@
   <div class="wrapper">
     <div id="page">
       <article class="cmpnt cmpnt-border cmpnt-full-article main">
-        <h1 class="alt-headline-green">Working poor in America</h1>
-          <div class="intro">
-            <div class="intro-content">
-              <p>
-                Low-wage workers are everywhere in America. Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Vero deserunt porro ipsum a
-                debitis repellat repudiandae. Aperiam dolores voluptate aliquid.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet in
-                fuga est necessitatibus eos vitae quos libero qui eligendi.
-                Voluptatibus numquam fugit veniam illum, eligendi laborum velit sed.
-                Quas, consectetur?
-              </p>
-              
+        <h1 class="alt-headline-green">Ten Years Without a Raise</h1>
+        <div class="intro">
+          <div class="intro-content">
+            <p>
+              The federal minimum wage has been stuck at $7.25 for ten years. That&rsquo;s 
+              $290 a week, $15,000 a year. In that time, the cost of living has continued 
+              to climb, leaving millions of families working harder than ever, but 
+              falling behind.
+            </p>
+            <p>
+              We can do better. The Raise the Wage Act of 2019 would gradually raise 
+              the wage to $15 by 2024. This map illustrates how it would benefit nearly 
+              40 million workers – 27 percent of the workforce.
+            </p>
           </div>
-          <div class="intro-partner">
+          <!-- <div class="intro-partner">
               In partnership with
               <div class="intro-partner-logo-wrap">
                   <img src="./images/logo-epi.svg" alt="Economic Policy Institute">
               </div>
-          </div>
+          </div> -->
         </div>
         <div class="intro-action-button-wrap">
-          <a class="cmpnt-submit-pointed reverse" href="http://www.oxfamamerica.org/working-poor-map-action">Take action</a>
+          <a class="cmpnt-submit-pointed reverse" href="http://www.oxfamamerica.org/working-poor-map-action">
+            Take action
+          </a>
         </div>
       </article>
 
       <article class="cmpnt cmpnt-border cmpnt-full-article main">
         <section class="section" id="map-section">
-          <h2 class="mapTitle">Concentrations of workers who would benefit from a minimum wage increase</h2>
-          <p class="mapSubtitle">
-            This interactive map illustrates the percentages of workers, families,
-            or children who would benefit from a raise in the minimum wage to $15.
-            The darker colors indicate higher concentrations of low-wage workers.
-            Click &ldquo;More maps&rdquo; to see the impact on different demographic groups.
-          </p>
+          <div class="map-intro">
+            <h2 class="mapTitle">A simple raise in the minimum wage would benefit millions</h2>
+            <p class="mapSubtitle">
+              This map illustrates the percentages of workers who would benefit from a raise to $15. The darker the color, the higher the concentration of low-wage workers.
+              Click &ldquo;More maps&rdquo; to see the impact on different demographic groups.
+            </p>
+          </div>
+          
 
           <hr>
 
@@ -204,6 +206,12 @@
                       <li>
                         <button data-value="men" class="btn" title="Change map shading to show this data">Men</button>
                       </li>
+                      <li>
+                        <button data-value="women-of-color" class="btn" title="Change map shading to show this data">Women of color</button>
+                      </li>
+                      <li>
+                        <button data-value="men-of-color" class="btn" title="Change map shading to show this data">Men of color</button>
+                      </li>
                     </ul>
                   </li>
 
@@ -211,19 +219,16 @@
                     <button type="button">Family</button>
                     <ul class="sub-group family">
                       <li>
-                        <button data-value="children" class="btn" title="Change map shading to show this data">Children of low-income workers</button>
-                      </li>
-                      <li>
-                        <button data-value="parents" class="btn" title="Change map shading to show this data">All working parents</button>
-                      </li>
-                      <li>
                         <button data-value="moms" class="btn" title="Change map shading to show this data">Working mothers</button>
                       </li>
                       <li>
                         <button data-value="dads" class="btn" title="Change map shading to show this data">Working fathers</button>
                       </li>
                       <li>
-                        <button data-value="family" class="btn" title="Change map shading to show this data">All family members in low-income households</button>
+                        <button data-value="single-parents" class="btn" title="Change map shading to show this data">Single parents</button>
+                      </li>
+                      <li>
+                        <button data-value="married-parents" class="btn" title="Change map shading to show this data">Married parents</button>
                       </li>
                     </ul>
                   </li>
@@ -250,7 +255,7 @@
                     <button type="button">Age</button>
                     <ul class="sub-group family">
                       <li>
-                        <button data-value="age1" class="btn" title="Change map shading to show this data">Younger than 25</button>
+                        <button data-value="age1" class="btn" title="Change map shading to show this data">16-24</button>
                       </li>
                       <li>
                         <button data-value="age2" class="btn" title="Change map shading to show this data">25-39</button>
@@ -299,27 +304,48 @@
         </section>
 
         <section id="footnotes" class="footnotes">
-          <h3>Footnotes</h3>
-          <ol>
+          <h4>Notes</h4>
+          <ul>
             <li>
-              We define low-wages workers as those earning $15 per hour or less.
+              <p>
+                <strong>Data by state:</strong> While the federal minimum wage has been 
+                stuck at $7.25 since 2009, many states and cities have increased the 
+                minimum wage. As the wage floor rises in an area, it lifts wages 
+                for most workers.
+              </p>
+              <p>
+                These differences are reflected in the numbers of workers who would 
+                benefit from a raise to $15. For example, the minimum wage in California 
+                is $11 in 2019, and is increasing to $15 by 2024; this means that 
+                no workers would benefit from the raise in the federal minimum. (It 
+                does not, obviously, mean that no workers are earning low wages.) 
+                Some cities within California currently have a minimum of $15.
+              </p>
+              <p>
+                For more information on state labor policies, visit 
+                <a href="http://oxfamamerica.org/statemap">oxfamamerica.org/statemap</a>.
+              </p>
             </li>
             <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil magni rerum assumenda voluptates perspiciatis.
+              <strong>Data on workers who benefit:</strong> &ldquo;Directly affected workers&rdquo; are 
+              those who would otherwise be paid less than $15 in 2024. &ldquo;Indirectly affected 
+              workers&rdquo; are those expected to have a wage rate just above the new minimum 
+              wage. They are likely to receive a raise as employer pay scales are adjusted 
+              upward to reflect the new minimum wage.
             </li>
             <li>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, perspiciatis. Voluptatum neque necessitatibus ipsum, repudiandae.
+              <strong>Women and men of color:</strong> These categories isolate and combine 
+              data for Black and Latino male and female workers.
             </li>
-          </ol>
+          </ul>
 
           <div class="sources">
             <h4>Sources</h4>
             <ul>
               <li>
-                Data compiled and analyzed by Oxfam America and the Economic Policy Institute.
-              </li>
-              <li>
-                Congressional district and state maps: Census Bureau, Natural Earth Data
+                Data supplied by the Economic Policy Institute (EPI). The EPI Minimum 
+                Wage Simulation Model uses data from the Census Bureau, Bureau of 
+                Labor Statistics, and Congressional Budget Office.
               </li>
             </ul>
           </div>

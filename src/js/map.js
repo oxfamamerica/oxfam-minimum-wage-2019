@@ -27,7 +27,7 @@ let svgMap = d3
   .attr("height", m_width * aspectMap);
 
 let keyMargin = { top: 5, right: 0, bottom: 0, left: 0 };
-let keyWidth = 240 - keyMargin.left - keyMargin.right;
+let keyWidth = 300 - keyMargin.left - keyMargin.right;
 let keyHeight = 35 - keyMargin.top - keyMargin.bottom;
 
 let svgKey = d3
@@ -71,27 +71,48 @@ if (mobile) {
 
 const tooltip = d3.select("#mapTooltip");
 
-const colorKey6blue = [
+// const colorKey6blue = [
+//   "rgb(199,233,180)",
+//   "rgb(127,205,187)",
+//   "rgb(65,182,196)",
+//   "rgb(29,145,192)",
+//   "rgb(34,94,168)",
+//   "rgb(12,44,132)"
+// ];
+
+// const colorKey10blue = [
+//   '#e0f3db',
+//   '#ccebc5',
+//   '#a8ddb5',
+//   '#7bccc4',
+//   '#4eb3d3',
+//   '#2b8cbe',
+//   '#0868ac',
+//   '#084081', 
+// ];
+const colorKey10blue = [
   "rgb(199,233,180)",
-  "rgb(127,205,187)",
-  "rgb(65,182,196)",
-  "rgb(29,145,192)",
-  "rgb(34,94,168)",
-  "rgb(12,44,132)"
+    "rgb(127,205,187)",
+    "rgb(65,182,196)",
+    "rgb(29,145,192)",
+    "rgb(34,94,168)",
+    "rgb(12,44,132)"
 ];
+
 const colorKey6red = [
   "rgb(255,213,125)",
   "rgb(255,184,97)",
   "rgb(255,138,72)",
   "rgb(254,80,54)",
   "rgb(228,38,41)",
-  "rgb(165,24,42)"
+  "rgb(165,24,42)",
 ];
 
-const redDomain = [0.12, 0.16, 0.2, 0.24, 0.28];
-const blueDomain = [0.1, 0.15, 0.2, 0.25, 0.3];
-const redxDomain = [0, 0.32];
-const bluexDomain = [0, 0.4];
+const redDomain = [0.2, 0.25, 0.30, 0.35, 0.4];
+// const blueDomain = [0.1, 0.15, 0.2, 0.25, 0.3];
+const blueDomain = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6];
+const redxDomain = [0, 0.45];
+const bluexDomain = [0, 0.7];
 
 let color = d3
   .scaleThreshold()
@@ -101,13 +122,13 @@ let color = d3
 const state = {
   map: "states",
   series: "all",
-  view: "affectedAllShare"
+  view: "allShare"
 };
 
 let x = d3
   .scaleLinear()
   .domain(redxDomain)
-  .range([0, 230]);
+  .range([0, keyWidth]);
 
 let xAxis = d3
   .axisBottom(x)
@@ -141,8 +162,42 @@ $(window).resize(
 //   svgMap.select("g").remove();
 // }
 
-function drawKey() {
-  g.selectAll("rect")
+// function drawKey() {
+//   g.selectAll("rect")
+//     .data(
+//       color.range().map(function(d, i) {
+//         return {
+//           x0: i ? x(color.domain()[i - 1]) : x.range()[0],
+//           x1: i < color.domain().length ? x(color.domain()[i]) : x.range()[1],
+//           z: d
+//         };
+//       })
+//     )
+//     .enter()
+//     .append("rect")
+//     .attr("height", 8)
+//     .attr("x", function(d) {
+//       return d.x0;
+//     })
+//     .attr("width", function(d) {
+//       return d.x1 - d.x0;
+//     })
+//     .style("fill", function(d) {
+//       return d.z;
+//     });
+// 
+//   g.call(xAxis)
+//     .append("text")
+//     .attr("class", "caption")
+//     .attr("y", -6);
+// }
+
+function updateKey() {
+  xAxis
+    .scale(x)
+    .tickValues(color.domain());
+  
+  let colorBlocks = g.selectAll("rect")
     .data(
       color.range().map(function(d, i) {
         return {
@@ -151,39 +206,17 @@ function drawKey() {
           z: d
         };
       })
-    )
-    .enter()
-    .append("rect")
-    .attr("height", 8)
+    );
+  
+  colorBlocks.exit()
+    .transition()
+    .duration(transitionSpeed)
     .attr("x", function(d) {
       return d.x0;
     })
-    .attr("width", function(d) {
-      return d.x1 - d.x0;
-    })
-    .style("fill", function(d) {
-      return d.z;
-    });
+    .style("fill-opacity", 0);
 
-  g.call(xAxis)
-    .append("text")
-    .attr("class", "caption")
-    .attr("y", -6);
-}
-
-function updateKey() {
-  xAxis.scale(x).tickValues(color.domain());
-
-  g.selectAll("rect")
-    .data(
-      color.range().map(function(d, i) {
-        return {
-          x0: i ? x(color.domain()[i - 1]) : x.range()[0],
-          x1: i < color.domain().length ? x(color.domain()[i]) : x.range()[1],
-          z: d
-        };
-      })
-    )
+  colorBlocks
     .transition()
     .duration(transitionSpeed)
     .attr("height", 8)
@@ -195,7 +228,27 @@ function updateKey() {
     })
     .style("fill", function(d) {
       return d.z;
-    });
+    })
+    .style("fill-opacity", 1);
+  
+  colorBlocks
+    .enter()
+    .append("rect")
+    // .attr("x", 300)
+    .style("fill-opacity", 0)
+    .transition()
+    .duration(transitionSpeed)
+    .attr("height", 8)
+    .attr("x", function(d) {
+      return d.x0;
+    })
+    .attr("width", function(d) {
+      return d.x1 - d.x0;
+    })
+    .style("fill", function(d) {
+      return d.z;
+    })
+    .style("fill-opacity", 1);
 
   g.transition()
     .duration(transitionSpeed)
@@ -377,6 +430,12 @@ function drawStates(view, series) {
         return 1;
       }
     })
+    .style("fill", function(d) {
+      if (data[d.id][view] > 0.4) {
+        return "#ddd"
+      }
+      return "#000";
+    })
     .attr("font-size", function(d) {
       switch (d.properties.APname) {
         case "Conn.":
@@ -395,7 +454,7 @@ function drawStates(view, series) {
 
 export function updateStates(view, series, colorScale) {
   if (colorScale === "blue" && state.colorScale !== "blue") {
-    color.domain(blueDomain).range(colorKey6blue);
+    color.domain(blueDomain).range(colorKey10blue);
     x.domain(bluexDomain);
     updateKey();
   } else if (colorScale === "red" && state.colorScale !== "red") {
@@ -420,6 +479,17 @@ export function updateStates(view, series, colorScale) {
     });
 
   statePolygons.on("mouseover", onMouseover);
+  
+  stateLabels
+    .transition()
+    .duration(transitionSpeed)
+    .style("fill", function(d) {
+      if (data[d.id][view] >= 0.4) {
+        return "#ddd"
+      }
+      return "#000";
+    });
+  
 }
 
 // function updateFeatures() {
@@ -622,5 +692,5 @@ d3.select(".zoomOutBtn").on("click", function() {
   }
 });
 
-drawStates("affectedAllShare", "all");
-drawKey();
+drawStates("allShare", "all");
+updateKey();
