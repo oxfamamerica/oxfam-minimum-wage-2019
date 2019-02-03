@@ -57,7 +57,7 @@ export function updatePopUp(series, state) {
   
   
 
-  $("#popup .popupTable").html(
+  $("#popup .allPopupTable").html(
     `
       <tr class="label">
         <td colspan="2">Percent of workers likely to benefit from increasing the minimum wage to $15</td>
@@ -68,52 +68,18 @@ export function updatePopUp(series, state) {
       </tr>
     `
   );
-
-  // $("#popup .popupTable").append(
-  //   `
-  //     <tr class="data">
-  //       <td class="col1">Women</td>
-  //       <td class="col2">${formatPercent(data[id].womenShare)}</td>
-  //     </tr>
-  //     <tr class="data last">
-  //       <td class="col1">Men</td>
-  //       <td class="col2">${formatPercent(data[id].menShare)}</td>
-  //     </tr>
-  //     <tr class="label">
-  //       <td colspan="2">Percent of working families that live ...</td>
-  //     </tr>
-  //     <tr class="data">
-  //       <td class="col1">In poverty</td>
-  //       <td class="col2">${formatPercent(data[id].povertyShare)}</td>
-  //     </tr>
-  //     <tr class="data last">
-  //       <td class="col1">Below 200% of the poverty line</td>
-  //       <td class="col2">${formatPercent(data[id].poorShare)}</td>
-  //     </tr>
-  //   `
-  // );
   
-  // if (series === "all") {
-  //   $("#popup .popupTable").append(
-  //     `
-  //       <tr class="label">
-  //         <td colspan="2">Percent of each demographic group likely to benefit from increasing the minimum wage to $15</td>
-  //       </tr>
-  //       <tr class="data">
-  //         <td class="col1">Women</td>
-  //         <td class="col2">${formatPercent(data[id].womenShare)}</td>
-  //       </tr>
-  //       <tr class="data last">
-  //         <td class="col1">Men</td>
-  //         <td class="col2">${formatPercent(data[id].menShare)}</td>
-  //       </tr>
-  //     `
-  //   );
-  // }
+  const exceptionStates = ['CA', 'MA', 'DC', 'WA', 'MN', 'NY', 'OR'];
+
+  if (exceptionStates.includes(id)) {
+    $('.js-all-note').removeClass('hidden');
+  } else {
+    $('.js-all-note').addClass('hidden');
+  }
 
 
   if (series === "gender" || series === "all") {
-    $("#popup .popupTable").append(
+    $("#popup .popupTable").html(
       `
         <tr class="label">
           <td colspan="2">Percent of each demographic group likely to benefit from increasing the minimum wage to $15</td>
@@ -139,7 +105,7 @@ export function updatePopUp(series, state) {
   }
 
   if (series === "poverty") {
-    $("#popup .popupTable").append(
+    $("#popup .popupTable").html(
       '<tr class="label"><td colspan="2">Percent of working families that live ...</td></tr><tr class="data"><td class="col1">In poverty</td><td class="col2">' +
         formatPercent(data[id].povertyShare) +
         '</td></tr><tr class="data last"><td class="col1">Below 200% of the poverty line</td><td class="col2">' +
@@ -149,7 +115,7 @@ export function updatePopUp(series, state) {
   }
 
   if (series === "race") {
-    $("#popup .popupTable").append(
+    $("#popup .popupTable").html(
       `
         <tr class="label">
           <td colspan="2">Percent of each demographic group likely to benefit from increasing the minimum wage to $15</td>
@@ -175,7 +141,7 @@ export function updatePopUp(series, state) {
   }
 
   if (series === "family") {
-    $("#popup .popupTable").append(
+    $("#popup .popupTable").html(
       `
         <tr class="label">
           <td colspan="2">Percent of each demographic group likely to benefit from increasing the minimum wage to $15</td>
@@ -201,7 +167,7 @@ export function updatePopUp(series, state) {
   }
 
   if (series === "age") {
-    $("#popup .popupTable").append(
+    $("#popup .popupTable").html(
       `
         <tr class="label">
           <td colspan="2">Percent of each demographic group likely to benefit from increasing the minimum wage to $15</td>
