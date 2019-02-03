@@ -1,4 +1,5 @@
 # oxfam-state-labor-index
 
-Run for development: `yarn dev`
-Build for production: `yarn build`
+Install dependencies: `yarn install` or `npm install`
+Run for development: `yarn dev` or `npm run dev`
+Build for production: `yarn build` or `npm run build`
