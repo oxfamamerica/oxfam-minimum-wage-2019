@@ -3,12 +3,12 @@ import formatPercent from "./format-percent";
 
 // Creates bars for the scorecard page
 
-export default function drawBarGraph(container, data) {
+export default function drawBarGraph(container, data, multiplier = 1) {
   if (isNaN(parseFloat(data[0]))) {
     data[0] = 0;
   }
 
-  var width = 550,
+  var width = 550 * multiplier,
     barHeight = 22,
     gap = 6;
 

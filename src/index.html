@@ -154,7 +154,7 @@
           </div> -->
         </div>
         <div class="intro-action-button-wrap">
-          <a class="cmpnt-submit-pointed reverse" href="http://www.oxfamamerica.org/working-poor-map-action">
+          <a class="cmpnt-submit-pointed reverse" href="http://www.oxfamamerica.org/raisethewageaction">
             Take action
           </a>
         </div>
@@ -190,7 +190,7 @@
                   <h5>Percent of all workers likely to benefit by increasing the minimum wage to $15</h5>
                   <ul class="btn-list">
                     <li class="active">
-                      <button data-value="all" class="btn" title="Change map shading to show this data">All low-income workers</button>
+                      <button data-value="all" class="btn" title="Change map shading to show this data">All workers</button>
                     </li>
                   </ul>
                 </div>
@@ -207,10 +207,28 @@
                         <button data-value="men" class="btn" title="Change map shading to show this data">Men</button>
                       </li>
                       <li>
-                        <button data-value="women-of-color" class="btn" title="Change map shading to show this data">Women of color</button>
+                        <button data-value="women-of-color" class="btn" title="Change map shading to show this data">Women of color <sup>3</sup></button>
                       </li>
                       <li>
-                        <button data-value="men-of-color" class="btn" title="Change map shading to show this data">Men of color</button>
+                        <button data-value="men-of-color" class="btn" title="Change map shading to show this data">Men of color <sup>3</sup></button>
+                      </li>
+                    </ul>
+                  </li>
+                  
+                  <li class="group-header js-race">
+                    <button type="button">Race / ethnicity</button>
+                    <ul class="sub-group family">
+                      <li>
+                        <button data-value="white" class="btn" title="Change map shading to show this data">White</button>
+                      </li>
+                      <li>
+                        <button data-value="black" class="btn" title="Change map shading to show this data">African American</button>
+                      </li>
+                      <li>
+                        <button data-value="hispanic" class="btn" title="Change map shading to show this data">Latino</button>
+                      </li>
+                      <li>
+                        <button data-value="otherRace" class="btn" title="Change map shading to show this data">Asian American and Other</button>
                       </li>
                     </ul>
                   </li>
@@ -233,24 +251,6 @@
                     </ul>
                   </li>
 
-                  <li class="group-header js-race">
-                    <button type="button">Race / ethnicity</button>
-                    <ul class="sub-group family">
-                      <li>
-                        <button data-value="white" class="btn" title="Change map shading to show this data">White</button>
-                      </li>
-                      <li>
-                        <button data-value="black" class="btn" title="Change map shading to show this data">African American</button>
-                      </li>
-                      <li>
-                        <button data-value="hispanic" class="btn" title="Change map shading to show this data">Latino</button>
-                      </li>
-                      <li>
-                        <button data-value="otherRace" class="btn" title="Change map shading to show this data">Asian American and Other</button>
-                      </li>
-                    </ul>
-                  </li>
-
                   <li class="group-header js-age">
                     <button type="button">Age</button>
                     <ul class="sub-group family">
@@ -269,7 +269,7 @@
                     </ul>
                   </li>
                   
-                  <li class="group-header js-poverty">
+                  <!-- <li class="group-header js-poverty">
                     <button type="button">Poverty</button>
                     <ul class="sub-group family">
                       <li>
@@ -279,7 +279,7 @@
                         <button data-value="nearPoverty" class="btn" title="Change map shading to show this data">Below 200% of the poverty line</button>
                       </li>
                     </ul>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -305,7 +305,7 @@
 
         <section id="footnotes" class="footnotes">
           <h4>Notes</h4>
-          <ul>
+          <ol>
             <li>
               <p>
                 <strong>Data by state:</strong> While the federal minimum wage has been 
@@ -337,7 +337,7 @@
               <strong>Women and men of color:</strong> These categories isolate and combine 
               data for Black and Latino male and female workers.
             </li>
-          </ul>
+          </ol>
 
           <div class="sources">
             <h4>Sources</h4>
@@ -361,67 +361,49 @@
     <div class="close-container">
         <button class="close-btn js-close-popup">Close</button>
     </div>
-    <h3 class="districtName">&nbsp;</h3>
+    <h3 class="js-districtName">&nbsp;</h3>
+    
     
     <div class="popup-content">
       <section>
         <p class="lead">
-			    <span class="affectedCount">xx,xxx</span> workers in this state
-          would benefit from increasing the minimum wage to $15.
+          <span class="js-all-count"></span> workers in this state
+          would benefit from increasing the minimum wage to $15 by 2024.
         </p>
-
-        <table class="popupTable">
-				  <tr class="label">
-					  <td colspan="2">Percent of workers likely to benefit from increasing the minimum wage to $15</td>
-				  </tr>
-        <tr class="data">
-        	<td class="col1">All</td>
-        	<td class="col2 affectedShare">x%</td>
-        </tr>
-        <tr class="data">
-        	<td class="col1">Women</td>
-        	<td class="col2 data2">x%</td>
-        </tr>
-        <tr class="data last">
-        	<td class="col1">Men</td>
-        	<td class="col2 data3">x%</td>
-        </tr>
-        <tr class="label">
-        	<td colspan="2">Percent of working families that live ...</td>
-        </tr>
-        <tr class="data">
-        	<td class="col1">In poverty</td>
-        	<td class="col2 data4">x%</td>
-        </tr>
-        <tr class="data last">
-        	<td class="col1">Below 200% of the poverty line</td>
-        	<td class="col2 data5">x%</td>
-        </tr>
-			</table>
+        <a href="#" target="_blank" class="btn tweet-btn js-tweet-btn">
+          <!-- <img src="images/icon-twitter-white.svg" alt="Twitter" class="tweet-icon"> -->
+          Tweet this to <span class="js-senator-names">senatorName</span>
+        </a>
+      </section>
+      
+      
+      <!-- <section class="tweet">
+        <h4 class="small-head">Tweet the <span class="js-senator-title">U.S. Senators</span> from <span class="js-districtName"></span></h4>
+        <p class="tweet-intro">
+          Send a message to <span class="js-senator-names">senatorName</span>
+        </p>
+        
+        <div class="tweet-speech-bubble">
+          <div class="js-tweet-message"></div>
+          
+          <a href="#" target="_blank" class="btn tweet-btn js-tweet-btn">
+            <img src="images/icon-twitter-white.svg" alt="Twitter" class="tweet-icon">
+            Tweet senators
+          </a>
+        </div>
+      </section> -->
+      
+    <section>
+      <table class="popupTable"></table>
+      
+      <p class="note">
+        Some states currently have higher minimum wages. See note on state data.
+      </p>
       
       <a href="scorecard.html" target="_blank" class="btn js-scorecard-btn">Open state scorecard</a>
     </section>
-
-
-    <section class="tweet">
-      <h4 class="small-head">Tweet U.S. Senators from <span class="districtName"></span></h4>
-      <p class="tweet-intro">
-        Send a message to senators <span class="senatorName">senatorName</span>
-      </p>
-      
-      <div class="tweet-speech-bubble">
-        <div class="js-tweet-message">
-          @ChuckGrassley @SenatorHarkin: 276,000 workers in Iowa could benefit from
-          a $15 minimum wage. See this Oxfam report: <span class="url">www.oxfamamerica.org/workingpoormap</span>
-        </div>
-        
-        <a href="#" target="_blank" class="btn tweet-btn js-tweet-btn">
-          <img src="images/icon-twitter-white.svg" alt="Twitter" class="tweet-icon">
-          Tweet senators
-        </a>
-      </div>
-      
-    </section>
+    
+    
   </div>
   </div>
   <!-- END POPUP -->

@@ -13,6 +13,7 @@ sup a.inlineFootnote {
 .footnotes {
 	margin-top: 2em;
 	margin-bottom: 20px;
+  font-size: 12px;
 
 	ol, ul {
 		margin: 0;
@@ -35,9 +36,5 @@ sup a.inlineFootnote {
 			color: #888;
 			background-color: #eee;
 		}
-	}
-
-	.sources li {
-		margin-bottom: 0.3em;
 	}
 }

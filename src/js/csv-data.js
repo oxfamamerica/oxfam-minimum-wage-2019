@@ -11,8 +11,8 @@ function parseCsv() {
       districtName: d.stateName,
       senator1: d.senator1,
       senator2: d.senator2,
-      senator1twitter: d.senator1twitter,
-      senator2twitter: d.senator2twitter,
+      senator1Twitter: d.senator1Twitter,
+      senator2Twitter: d.senator2Twitter,
       povertyShare: d.povertyShare,
       poorShare: d.poorShare,
       poorCount: d.poorCount,
@@ -52,10 +52,16 @@ function parseCsv() {
       aged25to39Share: d.age25To39Share,
       aged40to54Share: d.age40To54Share,
       aged55plusShare: d.age55UpShare,
-      menOfColorShare: d.menOfColorShare,
-      menOfColorCount: d.menOfColorCount,
-      womenOfColorShare: d.womenOfColorShare,
-      womenOfColorCount: d.womenOfColorCount
+      aged0to25ShareOfTotal: d.age16To24ShareOfTotal,
+      aged25to39ShareOfTotal: d.age25To39ShareOfTotal,
+      aged40to54ShareOfTotal: d.age40To54ShareOfTotal,
+      aged55plusShareOfTotal: d.age55UpShareOfTotal,
+      ageTeenagerShareOfTotal: d.ageTeenagerShareOfTotal,
+      age20UpShareOfTotal: d.age20UpShareOfTotal,
+      menOfColorShare: d.blackOrHispanicMenShare,
+      menOfColorCount: d.blackOrHispanicMenCount,
+      womenOfColorShare: d.blackOrHispanicWomenShare,
+      womenOfColorCount: d.blackOrHispanicWomenCount
     };
   });
 

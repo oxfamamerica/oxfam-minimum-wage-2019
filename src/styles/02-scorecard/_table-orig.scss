@@ -95,3 +95,23 @@
 		}
 	}
 }
+
+.graph {
+	svg {
+
+		rect.bar0 {
+			fill: $ox-green;
+		}
+
+		rect.bar1 {
+			fill: $beige-dark;
+		}
+	}
+}
+
+
+.table.no-rule {
+	tr, td {
+		border-bottom: 0;
+	}
+}

@@ -343,7 +343,7 @@ function drawStates(view, series) {
       active = d3.select(this).classed("selected", true);
       d3.select(`.stateLabel-${d.id}`).classed("selected", true);
 
-      updatePopUp(d.id, state.series);
+      updatePopUp(state.series, d.id);
 
       // if ( ! mobile ) {
       //     zoomTo(d.id);

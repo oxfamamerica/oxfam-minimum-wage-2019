@@ -21,7 +21,7 @@
 			}
 		}
 
-		span {
+		> span {
 			display: inline-block;
 			position: relative;
 			padding-left: 18px;
@@ -45,6 +45,36 @@
 			&.this:before {
 				background-color: $ox-green;
 			}
+			
+			&.pie1:before {
+				background-color: $pie1
+			}
+			
+			&.pie2:before {
+				background-color: $pie2
+			}
+			
+			&.pie3:before {
+				background-color: $pie3
+			}
+		}
+	}
+}
+.pie-graph-wrapper {
+	display: flex;
+	
+	svg {
+		font-size: 12px;
+	}
+	
+	.key {
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		
+		span {
+			margin: 0;
+			margin-bottom: 10px;
 		}
 	}
 }

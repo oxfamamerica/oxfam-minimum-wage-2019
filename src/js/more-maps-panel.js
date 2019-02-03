@@ -1,4 +1,7 @@
 import { updateStates } from "./map";
+import { updatePopUp } from "./popup";
+
+let series;
 
 function openMoreMaps() {
   $(".panel-overlay").removeClass("hidden");
@@ -83,107 +86,109 @@ $("button.btn").click(function() {
 
   switch ($this.attr("data-value")) {
     case "all":
-      // $(".mapTitle").text("Concentrations of low-wage workers");
-      // $(".mapSubtitle").text(
-      //   "This map illustrates the percentages of workers who would benefit from a raise in the minimum wage to $15. The darker colors indicate higher concentrations of low-wage workers."
-      // );
-      // $(".mapSubtitle").removeClass("hidden");
-      // view.data = affectedAllShareById;
-      // view.series = "all";
-      // color
-      //     .domain(redDomain)
-      //     .range(colorKey6red);
-      // x.domain(redxDomain);
-      // updateKey();
-      // if (view.map === "house") {
-      //     closePopUp();
-      //     updateHouse(affectedAllShareById);
-      // } else {
-      //     closePopUp();
-      //     updateStates(affectedAllShareById);
-      // }
+      series = "all";
       $(".js-mapOptionsBtn-label").text("All workers");
-      updateStates("allShare", "all", "red");
+      updateStates("allShare", series, "red");
       break;
     case "women":
+      series = "gender";
       $(".js-mapOptionsBtn-label").text("Women");
-      updateStates("womenShare", "gender", "blue");
+      updateStates("womenShare", series, "blue");
       break;
     case "men":
+      series = "gender";
       $(".js-mapOptionsBtn-label").text("Men");
-      updateStates("menShare", "gender", "blue");
+      updateStates("menShare", series, "blue");
       break;
     case "women-of-color":
+      series = "gender";
       $(".js-mapOptionsBtn-label").text("Women of color");
-      updateStates("womenOfColorShare", "gender", "blue");
+      updateStates("womenOfColorShare", series, "blue");
       break;
     case "men-of-color":
+      series = "gender";
       $(".js-mapOptionsBtn-label").text("Men of color");
-      updateStates("menOfColorShare", "gender", "blue");
+      updateStates("menOfColorShare", series, "blue");
       break;
     case "poverty":
+      series = "poverty";
       $(".js-mapOptionsBtn-label").text("Workers living in poverty");
-      updateStates("povertyShare", "poverty", "blue");
+      updateStates("povertyShare", series, "blue");
       break;
     case "nearPoverty":
+      series = "poverty";
       $(".js-mapOptionsBtn-label").text("Workers living below 200% of the poverty line");
-      updateStates("poorShare", "poverty", "blue");
+      updateStates("poorShare", series, "blue");
       break;
     case "dads":
+      series = "family";
       $(".js-mapOptionsBtn-label").text("Working fathers");
-      updateStates("dadsShare", "family", "blue");
+      updateStates("dadsShare", series, "blue");
       break;
     case "moms":
+      series = "family";
       $(".js-mapOptionsBtn-label").text("Working mothers");
-      updateStates("momsShare", "family", "blue");
+      updateStates("momsShare", series, "blue");
       break;
     case "single-parents":
+      series = "family";
       $(".js-mapOptionsBtn-label").text("Working single parents");
-      updateStates("singleParentsShare", "family", "blue");
+      updateStates("singleParentsShare", series, "blue");
       break;
     case "married-parents":
+      series = "family";
       $(".js-mapOptionsBtn-label").text("Working married parents");
-      updateStates("marriedParentsShare", "family", "blue");
+      updateStates("marriedParentsShare", series, "blue");
       break;
 
     case "white":
+      series = "race";
       $(".js-mapOptionsBtn-label").text("Whites");
-      updateStates("whiteShare", "race", "blue");
+      updateStates("whiteShare", series, "blue");
       break;
 
     case "black":
+      series = "race";
       $(".js-mapOptionsBtn-label").text("African Americans");
-      updateStates("blackShare", "race", "blue");
+      updateStates("blackShare", series, "blue");
       break;
 
     case "hispanic":
+      series = "race";
       $(".js-mapOptionsBtn-label").text("Latinos");
-      updateStates("hispanicShare", "race", "blue");
+      updateStates("hispanicShare", series, "blue");
       break;
 
     case "otherRace":
+      series = "race";
       $(".js-mapOptionsBtn-label").text("Asian Americans and others");
-      updateStates("otherRaceShare", "race", "blue");
+      updateStates("otherRaceShare", series, "blue");
       break;
 
     case "age1":
+      series = "age";
       $(".js-mapOptionsBtn-label").text("Workers aged 16-25");
-      updateStates("aged0to25Share", "age", "blue");
+      updateStates("aged0to25Share", series, "blue");
       break;
 
     case "age2":
+      series = "age";
       $(".js-mapOptionsBtn-label").text("Workers aged 25-39");
-      updateStates("aged25to39Share", "age", "blue");
+      updateStates("aged25to39Share", series, "blue");
       break;
 
     case "age3":
+      series = "age";
       $(".js-mapOptionsBtn-label").text("Workers aged 40-54");
-      updateStates("aged40to54Share", "age", "blue");
+      updateStates("aged40to54Share", series, "blue");
       break;
 
     case "age4":
+      series = "age";
       $(".js-mapOptionsBtn-label").text("Workers aged 55 and older");
-      updateStates("aged55plusShare", "age", "blue");
+      updateStates("aged55plusShare", series, "blue");
       break;
   }
+  
+  updatePopUp(series)
 });

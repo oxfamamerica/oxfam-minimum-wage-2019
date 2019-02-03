@@ -38,6 +38,10 @@
   @return #{$pixels/$context}em;
 }
 
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
 // Typography
 // -------------------------
 

@@ -36,14 +36,14 @@ svg#map {
 		pointer-events: none;
 	}
 
-	.hover {
-		fill:  $ox-green;
-	}
-
-	.selected,
-	.selected.hover {
-		fill: $purple;
-	}
+	// .hover {
+	// 	fill: tint($purple, 15%);
+	// }
+  // 
+	// .selected,
+	// .selected.hover {
+	// 	fill: $purple;
+	// }
 }
 
 
