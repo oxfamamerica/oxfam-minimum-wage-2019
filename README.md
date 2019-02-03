@@ -1,4 +1,4 @@
-# oxfam-state-labor-index
+# oxfam-state-min-wage-2019
 
 Install dependencies: `yarn install` or `npm install`
 
