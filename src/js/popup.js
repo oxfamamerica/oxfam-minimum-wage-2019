@@ -70,8 +70,16 @@ export function updatePopUp(series, state) {
   );
   
   const exceptionStates = ['CA', 'MA', 'DC', 'WA', 'MN', 'NY', 'OR'];
-
-  if (exceptionStates.includes(id)) {
+  let isExceptionState = false;
+  
+  for (let i = 0; i < exceptionStates.length; i +=1) {
+    if (exceptionStates[i] === id) {
+      isExceptionState = true;
+      break;
+    }
+  }
+  
+  if (isExceptionState) {
     $('.js-all-note').removeClass('hidden');
   } else {
     $('.js-all-note').addClass('hidden');
