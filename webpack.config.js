@@ -14,7 +14,8 @@ module.exports = (env) => {
     context: path.resolve(__dirname, "src"),
     entry: {
       index: "./js/index.js",
-      scorecard: "./js/scorecard.js"
+      scorecard: "./js/scorecard.js",
+      iframe: "./js/iframe.js"
     },
     output: {
       filename: "js/[name].js",
